@@ -21,5 +21,11 @@ public class MoodAnalyzerTest {
         System.out.println("UC1: Test Case For Sad Passed");
 
     }
+    @Test
+    public void testgivenNullMoodShouldReturnHaappy_thenAssertionHappy() {
+        moodAnalyzer = new MoodAnalyzer();
+        assertEquals("HAPPY", moodAnalyzer.analyseability());
+        System.out.println("UC2: Null PointerException Handling Test Case Passed");
+    }
 
 }

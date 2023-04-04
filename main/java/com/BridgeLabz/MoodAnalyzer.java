@@ -2,6 +2,7 @@ package com.BridgeLabz;
 
 public class MoodAnalyzer {
     String message;
+
     public MoodAnalyzer() {
     }
 
@@ -9,9 +10,14 @@ public class MoodAnalyzer {
         super();
         this.message = message;
     }
-    public String analyseability(){
-        if (message.contains("sad"))
-            return "Sad";
+
+    public String analyseability() {
+        try {
+            if (message.contains("Sad"))
+                return "SAD";
             return "Happy";
+        } catch (NullPointerException e) {
+            return "HAPPY";
         }
+    }
 }
